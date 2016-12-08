@@ -1,0 +1,2 @@
+path_to_raw_files=@PATH_TO_RAW_FILES@
+path_to_processed_files=@PATH_TO_PROCESSED_FILES@

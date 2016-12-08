@@ -1,0 +1,17 @@
+/.idea
+/.gradle
+*.idea
+*.iml
+**.DS_Store
+.git
+.project
+.settings
+.classpath
+*.ipr
+*.iws
+bin
+build
+out
+*log
+src/main/resources/*.properties
+src/main/resources/*.xml

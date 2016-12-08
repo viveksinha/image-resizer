@@ -1,4 +1,4 @@
-package com.opentable.resizer.constants;
+package com.opentable.transformers.constants;
 
 /**
  * @author Vivek Wiki

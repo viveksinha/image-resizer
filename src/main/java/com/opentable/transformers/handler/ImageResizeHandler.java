@@ -1,4 +1,4 @@
-package com.opentable.resizer.transformers.handler;
+package com.opentable.transformers.handler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

@@ -1,9 +1,9 @@
-package com.opentable.resizer.transformers.controller;
+package com.opentable.transformers.controller;
 
-import com.opentable.resizer.constants.Constant;
-import com.opentable.resizer.manager.ImageResizeManager;
-import com.opentable.resizer.transformers.configurer.ApplicationConfiguration;
-import com.opentable.resizer.transformers.model.Image;
+import com.opentable.transformers.constants.Constant;
+import com.opentable.transformers.manager.ImageResizeManager;
+import com.opentable.transformers.configurer.ApplicationConfiguration;
+import com.opentable.transformers.model.Image;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;

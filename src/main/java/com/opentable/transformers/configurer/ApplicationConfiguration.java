@@ -1,7 +1,7 @@
-package com.opentable.resizer.transformers.configurer;
+package com.opentable.transformers.configurer;
 
-import com.opentable.resizer.constants.Constant;
-import com.opentable.resizer.util.ResourceBundleEnum;
+import com.opentable.transformers.constants.Constant;
+import com.opentable.util.ResourceBundleEnum;
 
 import java.util.ResourceBundle;
 

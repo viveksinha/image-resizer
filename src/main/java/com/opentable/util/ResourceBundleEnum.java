@@ -1,4 +1,4 @@
-package com.opentable.resizer.util;
+package com.opentable.util;
 
 public enum ResourceBundleEnum {
     APPLICATION_PROPERTIES("application");

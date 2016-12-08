@@ -1,4 +1,4 @@
-package com.opentable.resizer.transformers.interceptor;
+package com.opentable.transformers.interceptor;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.HandlerInterceptor;

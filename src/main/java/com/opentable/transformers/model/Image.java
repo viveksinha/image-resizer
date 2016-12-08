@@ -1,4 +1,4 @@
-package com.opentable.resizer.transformers.model;
+package com.opentable.transformers.model;
 
 import org.springframework.web.multipart.MultipartFile;
 

@@ -1,6 +1,6 @@
-package com.opentable.resizer.transformers.configurer;
+package com.opentable.transformers.configurer;
 
-import com.opentable.resizer.transformers.interceptor.ApplicationInterceptor;
+import com.opentable.transformers.interceptor.ApplicationInterceptor;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

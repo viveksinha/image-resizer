@@ -1,9 +1,9 @@
-package com.opentable.resizer.manager;
+package com.opentable.transformers.manager;
 
-import com.opentable.resizer.constants.Constant;
-import com.opentable.resizer.transformers.configurer.ApplicationConfiguration;
-import com.opentable.resizer.transformers.handler.ImageResizeHandler;
-import com.opentable.resizer.transformers.model.Image;
+import com.opentable.transformers.constants.Constant;
+import com.opentable.transformers.configurer.ApplicationConfiguration;
+import com.opentable.transformers.handler.ImageResizeHandler;
+import com.opentable.transformers.model.Image;
 
 import org.apache.commons.collections4.ListUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -16,8 +16,8 @@ import java.util.Objects;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static com.opentable.resizer.constants.Constant.ERROR;
-import static com.opentable.resizer.constants.Constant.ERROR_MESSAGE;
+import static com.opentable.transformers.constants.Constant.ERROR;
+import static com.opentable.transformers.constants.Constant.ERROR_MESSAGE;
 
 /**
  * @author Vivek Wiki

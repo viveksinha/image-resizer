@@ -15,4 +15,3 @@ out
 *log
 src/main/resources/*.properties
 src/main/resources/*.xml
-src/main/webapp/images/*

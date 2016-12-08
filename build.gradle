@@ -74,4 +74,7 @@ task init(overwrite: true) {
     }
 }
 
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
 compileJava.dependsOn init

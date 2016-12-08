@@ -40,6 +40,7 @@ public class ApplicationController {
     protected ModelAndView imageCollection() throws IOException {
         List<String> fileNames = new ArrayList<>();
         for (File file : new File(ApplicationConfiguration.getPathToProcessedFiles()).listFiles()) {
+            log.error("File: {}", file.getAbsolutePath());
             fileNames.add(file.getName());
         }
         return new ModelAndView(Constant.IMAGE_COLLECTION, Constant.FILES, fileNames);

@@ -58,7 +58,7 @@ task init(overwrite: true) {
         ['src/main/resources'].each { dest ->
             copy() {
                 def props = new Properties()
-                file("template/env/${env}.env").withInputStream {
+                file("template/env/prod.env").withInputStream {
                     props.load(it);
                 }
                 from 'template/properties'
@@ -74,7 +74,7 @@ task init(overwrite: true) {
     }
 }
 
-task stage(dependsOn: ['build', 'clean'])
+task stage(dependsOn: ['build', 'init','clean'])
 build.mustRunAfter clean
 
 compileJava.dependsOn init

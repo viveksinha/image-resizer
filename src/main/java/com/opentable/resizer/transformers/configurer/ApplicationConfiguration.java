@@ -31,7 +31,4 @@ public class ApplicationConfiguration {
         return configuration.pathToProcessedFiles;
     }
 
-    public static String getPathToRawFiles() {
-        return configuration.pathToRawFiles;
-    }
 }

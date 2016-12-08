@@ -1,5 +1,9 @@
 package com.opentable.resizer.transformers.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -7,9 +11,11 @@ import lombok.Data;
  */
 @Data
 public class Image {
-    private int scaledWidth = 640;
-    private int scaledHeight = 350;
-    private String outputFormat = "jpg";
-    private boolean maintainAspectRatio = true;
+    private int scaledWidth;
+    private int scaledHeight;
+    private String outputFormat;
+    private boolean maintainAspectRatio;
+    private List<MultipartFile> multipartFiles;
+
 
 }

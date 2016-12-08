@@ -2,9 +2,9 @@ package com.opentable.resizer.transformers.handler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Iterator;
 
@@ -21,17 +21,16 @@ import javax.imageio.stream.MemoryCacheImageOutputStream;
 public class ImageResizeHandler {
     private static final float QUALITY = 0.85f;
 
-    public static boolean resizeImage(String inputImagePath,
+    public static boolean resizeImage(InputStream inputImageStream,
                                       String outputImagePath, int scaledWidth, int scaledHeight,
                                       String outputFormat, boolean maintainAspectRatio)
             throws IOException {
 
-        BufferedImage image = ImageIO.read(new File(inputImagePath));
+        BufferedImage image = ImageIO.read(inputImageStream);
         BufferedImage scaled = getScaledInstance(
                 image, scaledWidth, scaledHeight, RenderingHints.VALUE_INTERPOLATION_BILINEAR, true,
                 maintainAspectRatio);
-        writeImage(scaled, new FileOutputStream(outputImagePath), QUALITY, outputFormat);
-        return true;
+        return writeImage(scaled, new FileOutputStream(outputImagePath), QUALITY, outputFormat);
     }
 
 
@@ -79,14 +78,14 @@ public class ImageResizeHandler {
         return image;
     }
 
-    private static void writeImage(BufferedImage bufferedImage, OutputStream outputStream,
-                                   float quality, String outputFormat) throws IOException {
+    private static boolean writeImage(BufferedImage bufferedImage, OutputStream outputStream,
+                                      float quality, String outputFormat) throws IOException {
 
         Iterator<ImageWriter> iterator = ImageIO.getImageWritersByFormatName(outputFormat);
         if (iterator.hasNext()) {
-
             ImageWriter imageWriter = iterator.next();
             ImageOutputStream imageOutputStream = new MemoryCacheImageOutputStream(outputStream);
+
             try {
                 ImageWriteParam imageWriteParam = imageWriter.getDefaultWriteParam();
                 imageWriteParam.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
@@ -95,9 +94,11 @@ public class ImageResizeHandler {
                 imageWriter.setOutput(imageOutputStream);
                 IIOImage iioimage = new IIOImage(bufferedImage, null, null);
                 imageWriter.write(null, iioimage, imageWriteParam);
+                return true;
             } finally {
                 imageOutputStream.flush();
             }
         }
+        return false;
     }
 }

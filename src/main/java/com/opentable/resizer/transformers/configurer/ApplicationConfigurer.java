@@ -24,11 +24,6 @@ public class ApplicationConfigurer extends WebMvcConfigurerAdapter {
     private ApplicationInterceptor interceptor() {
         return new ApplicationInterceptor();
     }
-//
-//    @Bean(name = "multipartResolver")
-//    public StandardServletMultipartResolver multipartResolver() {
-//        return new StandardServletMultipartResolver();
-//    }
 
     @Bean
     public CommonsMultipartResolver multipartResolver() {

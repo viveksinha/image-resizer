@@ -9,8 +9,7 @@
 
 <div align="center">
     <h1>OpenTable Image Resizer</h1>
-    <a href="/api/v1/transformer/image_collection">
-        <input type="button" value="Image Collection"/></a>
+    <a href="/api/v1/transformer/image-collection"><input type="button" value="Image Collection"/></a>
     <br/>
     <form:form commandName="image" method="post" action="/api/v1/transformer/upload"
                enctype="multipart/form-data">
@@ -42,10 +41,10 @@
             </p>
 
             <p>
-                <label for="maintainAspectRatio">Fixed or maintain aspect ratio: </label>
+                <label for="maintainAspectRatio">Maintain aspect ratio: </label>
                 <form:select path="maintainAspectRatio">
-                    <form:option value="True" label="True"/>
-                    <form:option value="False" label="False"/>
+                    <form:option value="True" label="Yes"/>
+                    <form:option value="False" label="No"/>
                 </form:select>
             </p>
 

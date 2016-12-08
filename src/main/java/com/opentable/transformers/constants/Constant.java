@@ -16,4 +16,5 @@ public class Constant {
     public static final String SUCCESS = "success";
     public static final String FILES = "files";
     public static final String IMAGE_COLLECTION = "image_collection";
+    public static final String IMAGE_COLLECTION_URL = "image-collection";
 }

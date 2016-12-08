@@ -18,6 +18,7 @@
         </c:forEach>
     </ol>
     <a href="/api/v1/transformer"><input type="button" value="Go Back"/></a> <br/>
+    <a href="/api/v1/transformer/image-collection"><input type="button" value="Image Collection"/></a>
     <br/>
     <br/>
 </div>

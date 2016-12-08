@@ -1,8 +1,8 @@
 package com.opentable.transformers.controller;
 
+import com.opentable.transformers.configurer.ApplicationConfiguration;
 import com.opentable.transformers.constants.Constant;
 import com.opentable.transformers.manager.ImageResizeManager;
-import com.opentable.transformers.configurer.ApplicationConfiguration;
 import com.opentable.transformers.model.Image;
 
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,8 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,8 +36,8 @@ public class ApplicationController {
         return ImageResizeManager.resizeImage(image);
     }
 
-    @RequestMapping(value = Constant.IMAGE_COLLECTION, method = RequestMethod.GET)
-    protected ModelAndView imageCollection(HttpServletRequest request) throws IOException {
+    @RequestMapping(value = Constant.IMAGE_COLLECTION_URL, method = RequestMethod.GET)
+    protected ModelAndView imageCollection() throws IOException {
         List<String> fileNames = new ArrayList<>();
         for (File file : new File(ApplicationConfiguration.getPathToProcessedFiles()).listFiles()) {
             fileNames.add(file.getName());

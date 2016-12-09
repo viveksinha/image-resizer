@@ -13,7 +13,7 @@
     <a href="/api/v1/transformer"><input type="button" value="Home Page"/></a> <br/>
     <ol>
         <c:forEach items="${files}" var="file">
-            <img src="http://localhost:8080/api/v1/transformer/image/${file}"/>
+            <img src="/api/v1/transformer/image/${file}"/>
         </c:forEach>
     </ol>
     <a href="/api/v1/transformer"><input type="button" value="Home Page"/></a> <br/>

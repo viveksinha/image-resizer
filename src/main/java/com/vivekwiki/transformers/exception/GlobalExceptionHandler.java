@@ -1,6 +1,6 @@
-package com.opentable.transformers.exception;
+package com.vivekwiki.transformers.exception;
 
-import com.opentable.transformers.constants.Constant;
+import com.vivekwiki.transformers.constants.Constant;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

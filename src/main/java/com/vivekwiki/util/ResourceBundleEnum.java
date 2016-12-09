@@ -1,4 +1,4 @@
-package com.opentable.util;
+package com.vivekwiki.util;
 
 public enum ResourceBundleEnum {
     APPLICATION_PROPERTIES("application");

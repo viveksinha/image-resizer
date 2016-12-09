@@ -13,7 +13,6 @@ repositories {
     jcenter()
 }
 
-version = '1.0'
 //noinspection GroovyAssignabilityCheck
 dependencies {
 
@@ -58,7 +57,7 @@ task init(overwrite: true) {
         ['src/main/resources'].each { dest ->
             copy() {
                 def props = new Properties()
-                file("template/env/prod.env").withInputStream {
+                file("template/env/${env}.env").withInputStream {
                     props.load(it);
                 }
                 from 'template/properties'

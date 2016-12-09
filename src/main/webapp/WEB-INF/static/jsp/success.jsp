@@ -1,7 +1,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>OpenTable Image Resizer</title>
+    <title>Image Resizer</title>
 </head>
 <body>
 <br>
@@ -9,7 +9,7 @@
 
 <div align="center">
 
-    <h1>OpenTable Image Resizer</h1>
+    <h1>Image Resizer</h1>
 
     <p>Awesome.. Following files are uploaded successfully.</p>
     <ol>

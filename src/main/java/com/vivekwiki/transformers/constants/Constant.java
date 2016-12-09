@@ -1,4 +1,4 @@
-package com.opentable.transformers.constants;
+package com.vivekwiki.transformers.constants;
 
 /**
  * @author Vivek Wiki

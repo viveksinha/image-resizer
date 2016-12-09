@@ -24,7 +24,7 @@
     </appender>
 
 
-    <root name="com.opentable.resizer" additivity="false" level="@LOG_LEVEL@">
+    <root name="com.vivekwiki.transformers" additivity="false" level="@LOG_LEVEL@">
         <appender-ref ref="logger"/>
     </root>
 

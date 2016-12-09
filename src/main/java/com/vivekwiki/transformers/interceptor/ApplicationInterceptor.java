@@ -1,4 +1,4 @@
-package com.opentable.transformers.interceptor;
+package com.vivekwiki.transformers.interceptor;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Vivek Wiki
  */
 
-@ControllerAdvice(basePackages = "com.opentable.resizer")
+@ControllerAdvice(basePackages = "com.vivekwiki.transformers")
 public class ApplicationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,

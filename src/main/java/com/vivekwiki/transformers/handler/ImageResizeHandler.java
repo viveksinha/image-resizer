@@ -1,4 +1,4 @@
-package com.opentable.transformers.handler;
+package com.vivekwiki.transformers.handler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -15,12 +15,9 @@ import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageOutputStream;
 import javax.imageio.stream.MemoryCacheImageOutputStream;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * @author Vivek Wiki
  */
-@Slf4j
 public class ImageResizeHandler {
     private static final float QUALITY = 0.85f;
 
@@ -33,7 +30,7 @@ public class ImageResizeHandler {
         BufferedImage scaled = getScaledInstance(
                 image, scaledWidth, scaledHeight, RenderingHints.VALUE_INTERPOLATION_BILINEAR, true,
                 maintainAspectRatio);
-        log.error("File to be written {}", outputImagePath);
+
         return writeImage(scaled, new FileOutputStream(outputImagePath), QUALITY, outputFormat);
     }
 
@@ -78,7 +75,7 @@ public class ImageResizeHandler {
             graphics2D.dispose();
             image = tempImage;
         }
-        while (!maintainAspectRatio && (scaledWidth != targetWidth || scaledHeight != targetHeight));
+        while (!maintainAspectRatio && (scaledWidth < targetWidth && scaledHeight < targetHeight));
         return image;
     }
 

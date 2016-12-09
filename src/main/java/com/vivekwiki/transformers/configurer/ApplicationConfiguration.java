@@ -1,7 +1,7 @@
-package com.opentable.transformers.configurer;
+package com.vivekwiki.transformers.configurer;
 
-import com.opentable.transformers.constants.Constant;
-import com.opentable.util.ResourceBundleEnum;
+import com.vivekwiki.transformers.constants.Constant;
+import com.vivekwiki.util.ResourceBundleEnum;
 
 import java.util.ResourceBundle;
 

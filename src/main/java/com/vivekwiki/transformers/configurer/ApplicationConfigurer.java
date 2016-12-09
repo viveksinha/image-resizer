@@ -1,6 +1,6 @@
-package com.opentable.transformers.configurer;
+package com.vivekwiki.transformers.configurer;
 
-import com.opentable.transformers.interceptor.ApplicationInterceptor;
+import com.vivekwiki.transformers.interceptor.ApplicationInterceptor;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

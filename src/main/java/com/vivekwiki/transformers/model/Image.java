@@ -1,4 +1,4 @@
-package com.opentable.transformers.model;
+package com.vivekwiki.transformers.model;
 
 import org.springframework.web.multipart.MultipartFile;
 

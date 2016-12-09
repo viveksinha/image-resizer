@@ -1,14 +1,14 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
-    <title>OpenTable Image Resizer</title>
+    <title>Image Resizer</title>
 </head>
 <body>
 <br>
 <br>
 
 <div align="center">
-    <h1>OpenTable Image Resizer</h1>
+    <h1>Image Resizer</h1>
     <a href="/api/v1/transformer/image-collection"><input type="button" value="Image Collection"/></a>
     <br/>
     <form:form commandName="image" method="post" action="/api/v1/transformer/upload"

@@ -30,7 +30,7 @@ public class ImageResizeHandler {
         BufferedImage scaled = getScaledInstance(
                 image, scaledWidth, scaledHeight, RenderingHints.VALUE_INTERPOLATION_BILINEAR, true,
                 maintainAspectRatio);
-
+        System.out.println("path used: " + outputImagePath);
         return writeImage(scaled, new FileOutputStream(outputImagePath), QUALITY, outputFormat);
     }
 
@@ -75,7 +75,7 @@ public class ImageResizeHandler {
             graphics2D.dispose();
             image = tempImage;
         }
-        while (!maintainAspectRatio && (scaledWidth < targetWidth && scaledHeight < targetHeight));
+        while (!maintainAspectRatio && (scaledWidth != targetWidth || scaledHeight != targetHeight));
         return image;
     }
 

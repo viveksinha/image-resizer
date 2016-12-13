@@ -9,6 +9,7 @@ import org.apache.commons.collections4.ListUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,6 +61,7 @@ public class ImageResizeManager {
                     // To upload Raw files as well
                     // file.transferTo(new File(pathToRawFiles + fileName));
                     boolean success = false;
+                    processedDirectory(ApplicationConfiguration.getPathToProcessedFiles());
                     try {
                         success = ImageResizeHandler.resizeImage(file.getInputStream(),
                                 new StringBuffer(ApplicationConfiguration.getPathToProcessedFiles())
@@ -75,5 +77,15 @@ public class ImageResizeManager {
                     }
                 });
         return new ModelAndView(Constant.SUCCESS, Constant.FILES, fileNames);
+    }
+
+    private static void processedDirectory(String processedDirectoryName) {
+        File directoryName = new File(processedDirectoryName);
+
+        if (!directoryName.exists()) {
+            System.out.println("creating directory: " + directoryName);
+            directoryName.mkdir();
+        }
+        System.out.println(" Directory Exists: " + directoryName.exists());
     }
 }
